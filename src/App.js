@@ -10,7 +10,7 @@ const App = () => {
 
 	const getWeather = (event) => {
 		if (event.key === 'Enter') {
-			fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`).then(res => res.json()).then(result => setWeatherData(result));
+			fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`).then(res => res.json()).then(result => setWeatherData(result));
 			setCity('');
 			console.log(weatherData);
 		}
